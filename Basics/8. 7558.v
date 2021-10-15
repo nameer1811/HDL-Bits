@@ -6,13 +6,13 @@ module top_module (
     
     wire wireAndA, wireAndB, wireAndC, wireAndD;
     
-    assign wireAndA = p1a && p1c && p1b;
-    assign wireAndB = p1f && p1e && p1d;
-    assign wireAndC = p2a && p2b;
-    assign wireAndD = p2c && p2d;
+    assign wireAndA = p1a & p1c & p1b;
+    assign wireAndB = p1f & p1e & p1d;
+    assign wireAndC = p2a & p2b;
+    assign wireAndD = p2c & p2d;
     
-    assign p1y = wireAndA || wireAndB;
-    assign p2y = wireAndC || wireAndD;
+    assign p1y = wireAndA | wireAndB;
+    assign p2y = wireAndC | wireAndD;
 
 
 endmodule
