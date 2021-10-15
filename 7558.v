@@ -1,0 +1,18 @@
+module top_module ( 
+    input p1a, p1b, p1c, p1d, p1e, p1f,
+    output p1y,
+    input p2a, p2b, p2c, p2d,
+    output p2y );
+    
+    wire wireAndA, wireAndB, wireAndC, wireAndD;
+    
+    assign wireAndA = p1a && p1c && p1b;
+    assign wireAndB = p1f && p1e && p1d;
+    assign wireAndC = p2a && p2b;
+    assign wireAndD = p2c && p2d;
+    
+    assign p1y = wireAndA || wireAndB;
+    assign p2y = wireAndC || wireAndD;
+
+
+endmodule
